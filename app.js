@@ -1,10 +1,9 @@
 const express = require('express');
-const socketio = require('socket.io');
 const PORT = process.env.PORT || 3000;
 
 const app = express();
 const http = require('http').createServer(app);
-const io = socketio(http);
+const io = require('socket.io')(http);
 
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -18,8 +17,10 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-  socket.on('chat message', (msg) => {
-    io.emit('chat message', msg);
+  console.log('a user connected');
+
+  socket.on('disconnect', () => {
+    console.log('user disconnected');
   });
 });
 
