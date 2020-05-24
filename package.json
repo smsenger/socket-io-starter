@@ -7,11 +7,18 @@
     "dev": "nodemon app.js",
     "start": "node app.js"
   },
+  
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lachieh/socket-io-starter.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node",
+    "express",
+    "socket.io",
+    "realtime",
+    "websocket"
+  ],
   "author": "Lachlan Heywood (lachieh)",
   "license": "ISC",
   "bugs": {
@@ -25,5 +32,5 @@
     "socket.io": "^2.3.0"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "My first socket.io app"
 }
